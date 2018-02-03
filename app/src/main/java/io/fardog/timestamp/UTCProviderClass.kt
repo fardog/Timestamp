@@ -10,7 +10,7 @@ class UTCProviderClass : ComplicationProviderService() {
     override fun onComplicationUpdate(id: Int, complicationType: Int, manager: ComplicationManager?) {
         val fmt = when(complicationType) {
             ComplicationData.TYPE_SHORT_TEXT ->
-                "h:mm"
+                "H:mm"
             ComplicationData.TYPE_LONG_TEXT ->
                 "HH:mm 'UTC'"
             else ->
