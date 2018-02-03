@@ -44,6 +44,7 @@
                     android:id="@+id/source"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
                     android:text="@string/about_source"
                     android:textAlignment="center" />
 
@@ -52,6 +53,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/about_copyright" />
+
+                <TextView
+                    android:id="@+id/license"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_license_text" />
+
+                <TextView
+                    android:id="@+id/licenseLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_license_link" />
 
             </LinearLayout>
 

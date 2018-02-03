@@ -84,13 +84,11 @@
     <string name="about_header">Timestamp</string>
     <string name="about_text">A collection of useful complications for developers.</string>
     <string name="about_source">Source: github.com/fardog/timestamp</string>
-    <string name="about_copyright">
-Copyright 2018 Nathan Wittstock
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
+    <string name="about_copyright">Copyright 2018 Nathan Wittstock</string>
+    <string name="about_license_text">
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
     </string>
+    <string name="about_license_link">http://www.apache.org/licenses/LICENSE-2.0</string>
 </resources>
