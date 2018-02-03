@@ -17,9 +17,9 @@
    id="svg8"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="timestamp.svg"
-   inkscape:export-filename="/home/nwittstock/Projects/Timestamp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
-   inkscape:export-xdpi="13.82"
-   inkscape:export-ydpi="13.82">
+   inkscape:export-filename="/home/nwittstock/Projects/Timestamp/assets/timestamp.png"
+   inkscape:export-xdpi="57.599998"
+   inkscape:export-ydpi="57.599998">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -38,9 +38,9 @@
      units="px"
      inkscape:pagecheckerboard="true"
      inkscape:window-width="1916"
-     inkscape:window-height="1033"
+     inkscape:window-height="1011"
      inkscape:window-x="0"
-     inkscape:window-y="22"
+     inkscape:window-y="44"
      inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
@@ -139,8 +139,8 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36.64307785px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#ba1700;fill-opacity:1;stroke:none;stroke-width:0.91607696"
        id="text5136"
-       transform="rotate(-109.81715,133.07588,165.16137)"><textPath
+       transform="rotate(-107.28042,133.22503,164.90068)"><textPath
          xlink:href="#path5057-6"
-         id="textPath5144">• PDX • USA •</textPath></text>
+         id="textPath5144">• ROG • UK •</textPath></text>
   </g>
 </svg>
