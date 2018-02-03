@@ -15,6 +15,7 @@
 
         <service
             android:name=".UTCProviderClass"
+            android:icon="@drawable/ic_utc"
             android:label="@string/utc_provider">
             <intent-filter>
                 <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST" />
