@@ -16,7 +16,7 @@
     <string name="about_source">github.com/fardog/timestamp</string>
 
     <!-- Setting Activity -->
-    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_settings">Timestamp Settings</string>
 
     <string name="setting_about_key">about_timestamp</string>
     <string name="setting_about_title">About Timestamp</string>

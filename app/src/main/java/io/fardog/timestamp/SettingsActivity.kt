@@ -2,13 +2,15 @@ package io.fardog.timestamp
 
 import android.content.ComponentName
 import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.preference.PreferenceFragment
+import android.preference.PreferenceManager
 import android.support.wearable.activity.WearableActivity
 import android.support.wearable.complications.ComplicationProviderService
 import android.support.wearable.complications.ProviderUpdateRequester
 
-class SettingsActivity : WearableActivity() {
+class SettingsActivity : WearableActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
     companion object {
         private fun updateComplication(context: Context, cls: Class<out ComplicationProviderService>) {
             val component = ComponentName(context, cls)
@@ -17,10 +19,23 @@ class SettingsActivity : WearableActivity() {
         }
     }
 
-    override fun onDestroy() {
+    override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
         // update complications for new settings
         SettingsActivity.updateComplication(this, UTCProviderClass::class.java)
-        super.onDestroy()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        PreferenceManager
+                .getDefaultSharedPreferences(this)
+                .registerOnSharedPreferenceChangeListener(this)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        PreferenceManager
+                .getDefaultSharedPreferences(this)
+                .unregisterOnSharedPreferenceChangeListener(this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
