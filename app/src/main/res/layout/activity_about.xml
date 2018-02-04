@@ -10,66 +10,64 @@
     tools:context="io.fardog.timestamp.AboutActivity"
     tools:deviceIds="wear">
 
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="@dimen/inner_frame_layout_padding"
-        app:boxedEdges="all">
+        android:layout_height="match_parent">
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/about_header"
+                android:textAlignment="center"
+                android:textAppearance="@style/WearableActionDrawerTitleText" />
 
-                <TextView
-                    android:id="@+id/header"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/about_header"
-                    android:textAlignment="center"
-                    android:textAppearance="@style/WearableActionDrawerTitleText" />
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_text"
+                android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/about"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/about_text"
-                    android:textAlignment="center" />
+            <TextView
+                android:id="@+id/copyright"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/about_copyright"
+                android:textAlignment="center"
+                android:textSize="12sp" />
 
-                <TextView
-                    android:id="@+id/source"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10dp"
-                    android:text="@string/about_source"
-                    android:textAlignment="center" />
+            <TextView
+                android:id="@+id/license"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/about_license_text"
+                android:textAlignment="center"
+                android:textSize="8sp" />
 
-                <TextView
-                    android:id="@+id/copyright"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/about_copyright" />
+            <TextView
+                android:id="@+id/source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/about_source"
+                android:textAlignment="center"
+                android:textSize="8sp" />
 
-                <TextView
-                    android:id="@+id/license"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/about_license_text" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/licenseLink"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/about_license_link" />
+    </ScrollView>
 
-            </LinearLayout>
-
-        </ScrollView>
-
-    </FrameLayout>
 </android.support.wear.widget.BoxInsetLayout>
 
