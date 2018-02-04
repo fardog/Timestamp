@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/utc_setting_preference_category_title">
+
+    </PreferenceCategory>
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="@string/utc_setting_leading_zero_key"
+        android:summaryOff="@string/utc_setting_leading_zero_summary_off"
+        android:summaryOn="@string/utc_setting_leading_zero_summary_on"
+        android:title="@string/utc_setting_leading_zero_title" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="@string/utc_setting_utc_label_key"
+        android:summaryOff="@string/utc_setting_utc_label_summary_off"
+        android:summaryOn="@string/utc_setting_utc_label_summary_on"
+        android:title="@string/utc_setting_utc_label_title" />
+
+    <Preference
+        android:key="@string/setting_about_key"
+        android:title="@string/setting_about_title"
+        android:summary="@string/setting_about_summary">
+        <intent android:action="io.fardog.timestamp.AboutActivity" />
+    </Preference>
+
+</PreferenceScreen>

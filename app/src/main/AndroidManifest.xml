@@ -12,7 +12,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault">
-
         <service
             android:name=".UTCProviderClass"
             android:icon="@drawable/ic_utc"
@@ -41,8 +40,15 @@
             android:name=".AboutActivity"
             android:label="@string/title_activity_about">
             <intent-filter>
+                <action android:name="io.fardog.timestamp.AboutActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -5,7 +5,7 @@
     <string name="utc_provider">UTC</string>
 
     <!-- About Activity -->
-    <string name="title_activity_about">Timestamp</string>
+    <string name="title_activity_about">About Timestamp</string>
     <string name="about_header">Timestamp</string>
     <string name="about_text">A collection of useful complications for developers.</string>
     <string name="about_copyright">Copyright 2018 Nathan Wittstock</string>
@@ -14,4 +14,24 @@
         For further information, visit:
     </string>
     <string name="about_source">github.com/fardog/timestamp</string>
+
+    <!-- Setting Activity -->
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <string name="setting_about_key">about_timestamp</string>
+    <string name="setting_about_title">About Timestamp</string>
+    <string name="setting_about_summary">Source, copyright information.</string>
+
+    <!-- UTC Complication Preferences -->
+    <string name="utc_setting_preference_category_title">UTC Complication</string>
+
+    <string name="utc_setting_leading_zero_key">leading_zero</string>
+    <string name="utc_setting_leading_zero_title">Show leading zero</string>
+    <string name="utc_setting_leading_zero_summary_on">07:13</string>
+    <string name="utc_setting_leading_zero_summary_off">7:13</string>
+
+    <string name="utc_setting_utc_label_key">utc_label</string>
+    <string name="utc_setting_utc_label_title">Show UTC Label</string>
+    <string name="utc_setting_utc_label_summary_on">11:27 UTC</string>
+    <string name="utc_setting_utc_label_summary_off">11:27</string>
 </resources>
