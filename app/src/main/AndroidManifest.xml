@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="io.fardog.timestamp">
 
     <uses-feature android:name="android.hardware.type.watch" />
@@ -11,7 +12,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.DeviceDefault">
+        android:theme="@android:style/Theme.DeviceDefault"
+        tools:ignore="GoogleAppIndexingWarning">
 
         <uses-library
             android:name="com.google.android.wearable"
@@ -23,7 +25,8 @@
         <service
             android:name=".UTCProviderClass"
             android:icon="@drawable/ic_utc"
-            android:label="@string/utc_provider">
+            android:label="@string/utc_provider"
+            android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
             <intent-filter>
                 <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST" />
             </intent-filter>
@@ -35,7 +38,8 @@
         <service
             android:name=".TimestampProviderClass"
             android:icon="@drawable/ic_utc"
-            android:label="Ticks since epoch">
+            android:label="Time since epoch"
+            android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
             <intent-filter>
                 <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST" />
             </intent-filter>
