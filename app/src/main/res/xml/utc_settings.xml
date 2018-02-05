@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory android:title="@string/utc_setting_preference_category_title">
-
-    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/utc_setting_preference_category_title" />
     <CheckBoxPreference
         android:defaultValue="true"
         android:key="@string/utc_setting_leading_zero_key"
@@ -17,6 +15,15 @@
         android:summaryOn="@string/utc_setting_utc_label_summary_on"
         android:title="@string/utc_setting_utc_label_title" />
 
+    <PreferenceCategory android:title="@string/ts_setting_preference_category_title" />
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="@string/ts_setting_use_millis_key"
+        android:summaryOff="@string/ts_setting_use_millis_summary_off"
+        android:summaryOn="@string/ts_setting_use_millis_summary_on"
+        android:title="@string/ts_setting_use_millis_title" />
+
+    <PreferenceCategory android:title="@string/misc_setting_preference_category_title" />
     <Preference
         android:key="@string/setting_about_key"
         android:title="@string/setting_about_title"

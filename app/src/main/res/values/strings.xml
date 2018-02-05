@@ -34,4 +34,15 @@
     <string name="utc_setting_utc_label_title">Show UTC Label</string>
     <string name="utc_setting_utc_label_summary_on">11:27 UTC</string>
     <string name="utc_setting_utc_label_summary_off">11:27</string>
+
+    <!-- Timestamp Complication Preferences -->
+    <string name="ts_setting_preference_category_title">Time since Epoch Complication</string>
+
+    <string name="ts_setting_use_millis_key">use_millis</string>
+    <string name="ts_setting_use_millis_title">Use Milliseconds</string>
+    <string name="ts_setting_use_millis_summary_on">1517809011229ms</string>
+    <string name="ts_setting_use_millis_summary_off">1517809011s</string>
+
+    <!-- Misc Preferences -->
+    <string name="misc_setting_preference_category_title">Miscellaneous</string>
 </resources>

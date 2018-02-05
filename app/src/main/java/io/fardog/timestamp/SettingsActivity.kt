@@ -12,7 +12,7 @@ import android.support.wearable.complications.ProviderUpdateRequester
 
 class SettingsActivity : WearableActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
     companion object {
-        private fun updateComplication(context: Context, cls: Class<out ComplicationProviderService>) {
+        fun updateComplication(context: Context, cls: Class<out ComplicationProviderService>) {
             val component = ComponentName(context, cls)
             val req = ProviderUpdateRequester(context, component)
             req.requestUpdateAll()
@@ -22,6 +22,7 @@ class SettingsActivity : WearableActivity(), SharedPreferences.OnSharedPreferenc
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
         // update complications for new settings
         SettingsActivity.updateComplication(this, UTCProviderClass::class.java)
+        SettingsActivity.updateComplication(this, TimestampProviderClass::class.java)
     }
 
     override fun onResume() {
