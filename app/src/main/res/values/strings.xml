@@ -45,4 +45,7 @@
 
     <!-- Misc Preferences -->
     <string name="misc_setting_preference_category_title">Miscellaneous</string>
+
+    <!-- Storage Prefs -->
+    <string name="storage_ts_timestamp_hide">storage_ts_timestamp_hide</string>
 </resources>

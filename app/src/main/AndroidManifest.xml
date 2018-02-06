@@ -54,6 +54,7 @@
         </service>
 
         <receiver android:name="io.fardog.timestamp.TimestampBroadcastReceiver" />
+        <receiver android:name="io.fardog.timestamp.TimestampHideReceiver" />
 
         <activity
             android:name=".AboutActivity"
