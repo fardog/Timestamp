@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.preference.PreferenceManager
 
-class TimestampBroadcastReceiver : BroadcastReceiver() {
+class TimestampShowReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         context?:return
         intent?:return

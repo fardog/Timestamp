@@ -38,7 +38,7 @@
         <service
             android:name=".TimestampProviderClass"
             android:icon="@drawable/ic_utc"
-            android:label="Time since epoch"
+            android:label="@string/ts_provider"
             android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
             <intent-filter>
                 <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST" />
@@ -53,7 +53,7 @@
                 android:value="LONG_TEXT" />
         </service>
 
-        <receiver android:name="io.fardog.timestamp.TimestampBroadcastReceiver" />
+        <receiver android:name="io.fardog.timestamp.TimestampShowReceiver" />
         <receiver android:name="io.fardog.timestamp.TimestampHideReceiver" />
 
         <activity

@@ -2,13 +2,13 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory android:title="@string/utc_setting_preference_category_title" />
-    <CheckBoxPreference
+    <SwitchPreference
         android:defaultValue="true"
         android:key="@string/utc_setting_leading_zero_key"
         android:summaryOff="@string/utc_setting_leading_zero_summary_off"
         android:summaryOn="@string/utc_setting_leading_zero_summary_on"
         android:title="@string/utc_setting_leading_zero_title" />
-    <CheckBoxPreference
+    <SwitchPreference
         android:defaultValue="true"
         android:key="@string/utc_setting_utc_label_key"
         android:summaryOff="@string/utc_setting_utc_label_summary_off"
@@ -16,12 +16,19 @@
         android:title="@string/utc_setting_utc_label_title" />
 
     <PreferenceCategory android:title="@string/ts_setting_preference_category_title" />
-    <CheckBoxPreference
+    <SwitchPreference
         android:defaultValue="true"
         android:key="@string/ts_setting_use_millis_key"
         android:summaryOff="@string/ts_setting_use_millis_summary_off"
         android:summaryOn="@string/ts_setting_use_millis_summary_on"
         android:title="@string/ts_setting_use_millis_title" />
+    <ListPreference
+        android:defaultValue="7"
+        android:key="@string/ts_setting_dismiss_after_key"
+        android:summary="@string/ts_setting_dismiss_after_summary"
+        android:entries="@array/ts_setting_dismiss_after_entries"
+        android:entryValues="@array/ts_setting_dismiss_after_entry_values"
+        android:title="@string/ts_setting_dismiss_after_title" />
 
     <PreferenceCategory android:title="@string/misc_setting_preference_category_title" />
     <Preference

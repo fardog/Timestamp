@@ -16,16 +16,17 @@ class TimestampProviderClass : ComplicationProviderService() {
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         val useMillis = prefs.getBoolean(getString(R.string.ts_setting_use_millis_key), true)
         val shouldHide = prefs.getBoolean(getString(R.string.storage_ts_timestamp_hide) + ".${id}", true)
+        val dismissAfter = prefs.getString(getString(R.string.ts_setting_dismiss_after_key), "7").toIntOrNull()?:7
 
         val text = if(shouldHide) {
-            ComplicationText.plainText("Timestamp")
+            ComplicationText.plainText(getString(R.string.ts_complication_label_default))
         } else {
             val intent = Intent(this, TimestampHideReceiver::class.java).putExtra("id", id)
             val alarm: AlarmManager? = this.getSystemService(Context.ALARM_SERVICE) as? AlarmManager
 
             alarm?.setExact(
                     AlarmManager.RTC_WAKEUP,
-                    System.currentTimeMillis() + 10 * 1000,
+                    System.currentTimeMillis() + dismissAfter * 1000,
                     PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_CANCEL_CURRENT)
             )
             val ts = when(useMillis) {
@@ -37,7 +38,7 @@ class TimestampProviderClass : ComplicationProviderService() {
             ComplicationText.plainText(when(useMillis) { true -> ts + "ms" false -> ts + "s"})
         }
 
-        val intent = Intent(this, TimestampBroadcastReceiver::class.java).putExtra("id", id)
+        val intent = Intent(this, TimestampShowReceiver::class.java).putExtra("id", id)
         val data = when(complicationType) {
             ComplicationData.TYPE_LONG_TEXT ->
                     ComplicationData.Builder(ComplicationData.TYPE_LONG_TEXT)
