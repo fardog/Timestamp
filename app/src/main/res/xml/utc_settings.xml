@@ -30,7 +30,9 @@
         android:entryValues="@array/ts_setting_dismiss_after_entry_values"
         android:title="@string/ts_setting_dismiss_after_title" />
 
-    <PreferenceCategory android:title="@string/misc_setting_preference_category_title" />
+    <PreferenceCategory
+        android:title="@string/misc_setting_preference_category_title"
+        android:summary="This is a preference summary"/>
     <Preference
         android:key="@string/setting_about_key"
         android:title="@string/setting_about_title"

@@ -4,6 +4,7 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.Icon
 import android.preference.PreferenceManager
 import android.support.wearable.complications.ComplicationData
 import android.support.wearable.complications.ComplicationManager
@@ -42,13 +43,13 @@ class TimestampProviderClass : ComplicationProviderService() {
         val data = when(complicationType) {
             ComplicationData.TYPE_LONG_TEXT ->
                     ComplicationData.Builder(ComplicationData.TYPE_LONG_TEXT)
+                            .setIcon(Icon.createWithResource(this, R.drawable.ic_ts))
                             .setLongText(text)
                             .setTapAction(PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_CANCEL_CURRENT))
-                            .build()
             else ->
                     null
         }?:return
 
-        manager?.updateComplicationData(id, data)
+        manager?.updateComplicationData(id, data.build())
     }
 }
