@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="io.fardog.timestamp">
 
     <uses-feature android:name="android.hardware.type.watch" />
@@ -11,11 +12,21 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.DeviceDefault">
+        android:theme="@android:style/Theme.DeviceDefault"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="true" />
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
         <service
             android:name=".UTCProviderClass"
             android:icon="@drawable/ic_utc"
-            android:label="@string/utc_provider">
+            android:label="@string/utc_provider"
+            android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
             <intent-filter>
                 <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST" />
             </intent-filter>
@@ -24,17 +35,26 @@
                 android:name="android.support.wearable.complications.SUPPORTED_TYPES"
                 android:value="SHORT_TEXT,LONG_TEXT" />
         </service>
+        <service
+            android:name=".TimestampProviderClass"
+            android:icon="@drawable/ic_ts"
+            android:label="@string/ts_provider"
+            android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
+            <intent-filter>
+                <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="io.fardog.timestamp.TimestampProviderUpdate" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
 
-        <uses-library
-            android:name="com.google.android.wearable"
-            android:required="true" />
-        <!--
-               Set to true if your app is Standalone, that is, it does not require the handheld
-               app to run.
-        -->
-        <meta-data
-            android:name="com.google.android.wearable.standalone"
-            android:value="true" />
+            <meta-data
+                android:name="android.support.wearable.complications.SUPPORTED_TYPES"
+                android:value="LONG_TEXT" />
+        </service>
+
+        <receiver android:name="io.fardog.timestamp.TimestampShowReceiver" />
+        <receiver android:name="io.fardog.timestamp.TimestampHideReceiver" />
 
         <activity
             android:name=".AboutActivity"
