@@ -49,6 +49,14 @@
     <string name="ts_setting_dismiss_after_title">Dismiss After</string>
     <string name="ts_setting_dismiss_after_summary">Time after which the requested timestamp is dismissed.</string>
 
+    <string name="ts_setting_complication_label_key">complication_label</string>
+    <string name="ts_setting_complication_label_title">Complication Label</string>
+    <string name="ts_setting_complication_label_summary">Label shown when the complication is inactive.</string>
+
+    <string name="ts_setting_hide_complication_label_summary">Hide the complication label, showing the icon only.</string>
+    <string name="ts_setting_hide_complication_label_key">hide_complication_label</string>
+    <string name="ts_setting_hide_complication_label_title">Hide Complication Label</string>
+
     <!-- Misc Preferences -->
     <string name="misc_setting_preference_category_title">Miscellaneous</string>
 
