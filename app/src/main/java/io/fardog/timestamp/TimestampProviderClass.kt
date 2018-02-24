@@ -18,9 +18,15 @@ class TimestampProviderClass : ComplicationProviderService() {
         val useMillis = prefs.getBoolean(getString(R.string.ts_setting_use_millis_key), true)
         val shouldHide = prefs.getBoolean(getString(R.string.storage_ts_timestamp_hide) + ".${id}", true)
         val dismissAfter = prefs.getString(getString(R.string.ts_setting_dismiss_after_key), "7").toIntOrNull()?:7
+        val complicationLabel = when(prefs.getBoolean(getString(R.string.ts_setting_hide_complication_label_key), false)) {
+            false -> prefs.getString(
+                        getString(R.string.ts_setting_complication_label_key),
+                        getString(R.string.ts_complication_label_default))
+            true -> ""
+        }
 
         val text = if(shouldHide) {
-            ComplicationText.plainText(getString(R.string.ts_complication_label_default))
+            ComplicationText.plainText(complicationLabel)
         } else {
             val intent = Intent(this, TimestampHideReceiver::class.java).putExtra("id", id)
             val alarm: AlarmManager? = this.getSystemService(Context.ALARM_SERVICE) as? AlarmManager

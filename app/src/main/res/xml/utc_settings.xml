@@ -22,6 +22,16 @@
         android:summaryOff="@string/ts_setting_use_millis_summary_off"
         android:summaryOn="@string/ts_setting_use_millis_summary_on"
         android:title="@string/ts_setting_use_millis_title" />
+    <EditTextPreference
+        android:defaultValue="@string/ts_complication_label_default"
+        android:key="@string/ts_setting_complication_label_key"
+        android:title="@string/ts_setting_complication_label_title"
+        android:summary="@string/ts_setting_complication_label_summary" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/ts_setting_hide_complication_label_key"
+        android:title="@string/ts_setting_hide_complication_label_title"
+        android:summary="@string/ts_setting_hide_complication_label_summary" />
     <ListPreference
         android:defaultValue="7"
         android:key="@string/ts_setting_dismiss_after_key"
