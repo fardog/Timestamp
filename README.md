@@ -2,25 +2,31 @@
 
 Android Wear complications for developers.
 
-**Note:** This is an app built quickly for my own use; it may eventually
-be developed into something useful for others, but for now it's distributed
-only via this repository.
-
 _Timestamp_ was created to provide a UTC time complication, displaying
 24 hour time. Android Wear has a similar complication, however it requires
 selecting Reykjavík timezone (and having `REY` shown on the screen at all
 times).
 
+It also contains a time-since-epoch complication for watch faces which can
+display a "long" text complication. Tapping this complication shows you the
+current seconds or milliseconds since epoch, based on your selected settings.
+
 ## Installation
 
-A [signed apk][apk] is provided in this repository; it must be installed
-using the Android developer tools, the process for which varies from watch
-to watch. You may also build from source.
+There are several options for installation:
+
+* Install via the [Google Play Store][play]
+* Sideload the [signed apk][apk] in this repository
+* Build from source
+
+The process for building/sideloading APKs varies from watch to watch, and is
+not documented here. The project is a standard [Android Studio 3.0][studio]
+project, and may be directly ported/built with no special considerations.
 
 ## Complications
 
 * [x] UTC Time
-* [ ] Unix Timestamp
+* [x] Unix Timestamp
 
 ## License
 
@@ -35,3 +41,5 @@ to watch. You may also build from source.
 ```
 
 [apk]: ./app/release/app-release.apk
+[play]: https://play.google.com/store/apps/details?id=io.fardog.timestamp
+[studio]: https://developer.android.com/studio/index.html
