@@ -48,6 +48,7 @@ class SettingsActivity : WearableActivity(), SharedPreferences.OnSharedPreferenc
     }
 
     class UTCPreferenceFragment : PreferenceFragment() {
+        @Deprecated("Deprecated")
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             addPreferencesFromResource(R.xml.utc_settings)
