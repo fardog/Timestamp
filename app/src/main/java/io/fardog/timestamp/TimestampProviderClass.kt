@@ -31,7 +31,7 @@ class TimestampProviderClass : ComplicationProviderService() {
             val intent = Intent(this, TimestampHideReceiver::class.java).putExtra("id", id)
             val alarm: AlarmManager? = this.getSystemService(Context.ALARM_SERVICE) as? AlarmManager
 
-            alarm?.setExact(
+            alarm?.set(
                     AlarmManager.RTC_WAKEUP,
                     System.currentTimeMillis() + dismissAfter * 1000,
                     PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE)
