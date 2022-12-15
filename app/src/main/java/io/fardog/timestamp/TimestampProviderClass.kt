@@ -34,7 +34,7 @@ class TimestampProviderClass : ComplicationProviderService() {
             alarm?.setExact(
                     AlarmManager.RTC_WAKEUP,
                     System.currentTimeMillis() + dismissAfter * 1000,
-                    PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_CANCEL_CURRENT)
+                    PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE)
             )
             val ts = when(useMillis) {
                 true ->
@@ -51,7 +51,7 @@ class TimestampProviderClass : ComplicationProviderService() {
                     ComplicationData.Builder(ComplicationData.TYPE_LONG_TEXT)
                             .setIcon(Icon.createWithResource(this, R.drawable.ic_ts))
                             .setLongText(text)
-                            .setTapAction(PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_CANCEL_CURRENT))
+                            .setTapAction(PendingIntent.getBroadcast(this, id, intent, PendingIntent.FLAG_CANCEL_CURRENT or PendingIntent.FLAG_IMMUTABLE))
             else ->
                     null
         }?:return
