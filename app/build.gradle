@@ -8,8 +8,8 @@ android {
         applicationId "io.fardog.timestamp"
         minSdkVersion 25
         targetSdkVersion 33
-        versionCode 7
-        versionName "1.4.0"
+        versionCode 8
+        versionName "1.4.1"
     }
     buildTypes {
         release {
