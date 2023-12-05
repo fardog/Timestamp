@@ -8,8 +8,8 @@ android {
         applicationId "io.fardog.timestamp"
         minSdkVersion 25
         targetSdkVersion 33
-        versionCode 9
-        versionName "1.5.0"
+        versionCode 10
+        versionName "1.5.1"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
