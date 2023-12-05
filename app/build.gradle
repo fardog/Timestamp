@@ -3,11 +3,11 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdk 34
+    compileSdk 33
     defaultConfig {
         applicationId "io.fardog.timestamp"
         minSdkVersion 25
-        targetSdkVersion 34
+        targetSdkVersion 33
         versionCode 9
         versionName "1.5.0"
     }
