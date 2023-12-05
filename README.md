@@ -20,7 +20,7 @@ There are several options for installation:
 * Build from source
 
 The process for building/sideloading APKs varies from watch to watch, and is
-not documented here. The project is a standard [Android Studio 3.0][studio]
+not documented here. The project is a standard [Android Studio][studio]
 project, and may be directly ported/built with no special considerations.
 
 ## Complications
